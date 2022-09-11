@@ -1,3 +1,3 @@
 # Math Processing
 
-My experiments with linear algebra and combinatorics in Processing.
+My studies and experiments with linear algebra and combinatorics in Processing.
