@@ -18,24 +18,24 @@ void showGrid(int[][] M, int[] x) {
   pushMatrix();
   translate(3*width/4-s*(n+1)/2, height/2-s*m-off);
   noStroke(); 
-  //fill(255);
+  //fill(360);
   fill(0);
   rect(0-off, 0-off, s*(n+1)+5*off/2, s*m+2*off);
   for (int i = 0; i < m; i++) {
     for (int j = 0; j < n; j++) {
-      if (M[i][j] >= 0) fill(hue(c), saturation(c), map(M[i][j], 0, max, 0, 255));
-      else fill((180+hue(c))%360, saturation(c), map(-M[i][j], 0, max, 0, 255));
+      if (M[i][j] >= 0) fill(hue(c), saturation(c), M[i][j]);
+      else fill((180+hue(c))%360, saturation(c), -M[i][j]);
       rect(j*s, i*s, s, s);
     }
   }
   for (int i = 0; i < m; i++) {
-    if (x[i] >= 0) fill(hue(c), saturation(c), map(x[i], 0, max, 0, 255));
-    else fill((180+hue(c))%360, saturation(c), map(-x[i], 0, max, 0, 255));
+    if (x[i] >= 0) fill(hue(c), saturation(c), x[i]);
+    else fill((180+hue(c))%360, saturation(c), -x[i]);
     rect(n*s+off/2, i*s, s, s);
   }
   popMatrix();
   
-  fill(255); // For dark background
+  fill(360); // For dark background
   //fill(0);
   for (int i = 0; i < m; i++) {
     String str = M[i][0] + "x_" + 1;

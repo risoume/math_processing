@@ -16,7 +16,7 @@ PFont f;
 
 void setup() {
   size(600, 600);
-  colorMode(HSB);
+  colorMode(HSB, 360, 100, max);
   f = createFont("Courier New", 15);
   textFont(f);
   noLoop();
@@ -40,7 +40,7 @@ void init() {
 
 void draw() {
   background(c);
-  stroke(255);
+  stroke(360);
   strokeWeight(20);
   line(0, 300, 600, 300);
   
@@ -48,7 +48,7 @@ void draw() {
   translate(width, height);
   rotate(PI);
   showGrid(B, b2);
-  frame(40, 255);
+  frame(40, 360);
 }
 
 void mouseReleased() {
